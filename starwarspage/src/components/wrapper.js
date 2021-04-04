@@ -1,9 +1,15 @@
+import { ThemeProvider } from '@material-ui/styles';
 import Finder from './finder'
+import Navbar from './navbar';
+import theme from './themes'
 
 const Wrapper = () => {
   return(
     <div>
-      <Finder />
+      <Navbar/>
+      <ThemeProvider theme={theme}>
+        <Finder />
+      </ThemeProvider>
 
     </div>
   )
